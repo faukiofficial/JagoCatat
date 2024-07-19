@@ -31,7 +31,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
   return (
     <div
-      className={`bg-white flex items-center justify-between px-2 md:px-6 py-2 drop-shadow}`}
+      className="bg-white flex items-center justify-between px-2 md:px-6 py-2 drop-shadow shadow-sm fixed w-full top-0"
     >
       <h2
         className={`text-l md:text-xl font-medium text-black py-2 ${
