@@ -87,7 +87,7 @@ const AddEditNotes = ({
   return (
     <div className="relative">
       <button
-        className="w-10 h-10 rounded-full flex items-center justify-center absolute -top-3 -right-3 hover:bg-slate-500"
+        className="w-7 h-7 rounded-full flex items-center justify-center absolute -top-3 -right-3 hover:bg-slate-500"
         onClick={onClose}
       >
         <MdClose className="text-xl text-slate-400" />
@@ -98,7 +98,7 @@ const AddEditNotes = ({
           type="text"
           name=""
           id=""
-          className="text-2xl text-slate-950 outline-none"
+          className="text-xl text-slate-950 outline-none border rounded-md p-2 px-3"
           placeholder="Add the Title"
           value={title}
           onChange={({ target }) => setTitle(target.value)}

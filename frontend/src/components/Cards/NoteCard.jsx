@@ -31,8 +31,8 @@ const NoteCard = ({
 
       <div className="flex items-center justify-between mt-2">
         <div className="text-xs text-slate-500">{
-        tags.map((item)=>(
-          `#${item} `
+        tags.map((item, index)=>(
+          <span key={index} className="mx-1 p-1 bg-slate-100">#{item}</span>
         ))
         }</div>
 

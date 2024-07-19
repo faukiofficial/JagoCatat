@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProfileInfo from "../Cards/ProfileInfo";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
+import { LuCodepen } from "react-icons/lu";
 
 const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -35,11 +36,11 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
       }`}
     >
       <h2
-        className={`text-xl font-medium text-black py-2 ${
+        className={`text-l md:text-xl font-medium text-black py-2 ${
           isAuthPage ? "text-center w-full" : ""
         }`}
       >
-        <Link to='/dashboard'>JagoCatat</Link>
+        <Link to='/dashboard' className="flex items-center gap-1" ><LuCodepen className="text-primary text-3xl" /><span className="hidden md:block">JagoCatat</span></Link>
       </h2>
 
       {!isAuthPage && (
