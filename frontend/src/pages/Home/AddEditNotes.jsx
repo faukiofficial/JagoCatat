@@ -98,7 +98,7 @@ const AddEditNotes = ({
           type="text"
           name=""
           id=""
-          className="text-xl text-slate-950 outline-none border rounded-md p-2 px-3"
+          className="text-sm md:text-xl text-slate-950 outline-none border rounded-md p-2 px-3"
           placeholder="Add the Title"
           value={title}
           onChange={({ target }) => setTitle(target.value)}
