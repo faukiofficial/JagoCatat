@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProfileInfo from "../Cards/ProfileInfo";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
@@ -39,7 +39,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
           isAuthPage ? "text-center w-full" : ""
         }`}
       >
-        JagoCatat
+        <Link to='/dashboard'>JagoCatat</Link>
       </h2>
 
       {!isAuthPage && (
