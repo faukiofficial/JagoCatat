@@ -3,7 +3,7 @@ require("dotenv").config();
 const config = require("./config.json");
 const mongoose = require("mongoose");
 
-mongoose.connect(config.connectionString);
+mongoose.connect("mongodb+srv://test1234:test1234@notesapp.ila5n9h.mongodb.net/?retryWrites=true&w=majority&appName=notesapp");
 
 const express = require("express");
 const cors = require("cors");
@@ -25,7 +25,8 @@ app.use(
   cors({
     origin: ["https://jagocatat.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
 
