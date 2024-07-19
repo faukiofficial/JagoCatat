@@ -39,6 +39,6 @@ app.delete("/delete-note/:noteId", authenticateToken, controller.deleteNote);
 app.put("/update-note-pinned/:noteId", authenticateToken, controller.updateNotePinned);
 app.get("/search-notes/", authenticateToken, controller.searchNotes);
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
 
 module.exports = app;

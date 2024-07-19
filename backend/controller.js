@@ -1,4 +1,3 @@
-// controller.js
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
 const jwt = require("jsonwebtoken");
