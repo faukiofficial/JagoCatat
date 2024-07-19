@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://jagocatat-server.vercel.app/"],
+    origin: ["https://jagocatat.vercel.app"],
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true
   })
