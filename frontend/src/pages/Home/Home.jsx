@@ -149,7 +149,7 @@ const Home = () => {
       <Navbar userInfo={userInfo} onSearchNote={onSearchNote} handleClearSearch={handleClearSearch} />
 
       <div className="container mx-auto pb-[120px] px-2">
-        { allNotes.length > 0 ? (<div className="grid md:grid-cols-3 gap-4 mt-8">
+        { allNotes.length > 0 ? (<div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-8">
           {allNotes.map((item) => (
             <NoteCard
               key={item._id}

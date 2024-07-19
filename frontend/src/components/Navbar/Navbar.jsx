@@ -16,14 +16,14 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
   };
 
   const handleSearch = () => {
-    if(searchQuery){
-      onSearchNote(searchQuery)
+    if (searchQuery) {
+      onSearchNote(searchQuery);
     }
   };
 
   const onClearSearch = () => {
     setSearchQuery("");
-    handleClearSearch()
+    handleClearSearch();
   };
 
   const isAuthPage =
@@ -31,16 +31,18 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
   return (
     <div
-      className={`bg-white flex items-center justify-between px-2 md:px-6 py-2 drop-shadow ${
-        isAuthPage ? "justify-center" : ""
-      }`}
+      className={`bg-white flex items-center justify-between px-2 md:px-6 py-2 drop-shadow}`}
     >
       <h2
         className={`text-l md:text-xl font-medium text-black py-2 ${
           isAuthPage ? "text-center w-full" : ""
         }`}
       >
-        <Link to='/dashboard' className="flex items-center gap-1" ><LuCodepen className="text-primary text-3xl" /><span className="hidden md:block">JagoCatat</span></Link>
+        <Link to="/dashboard" className={`flex items-center gap-1 ${
+        isAuthPage ? "justify-center" : ""}`}>
+          <LuCodepen className="text-3xl" />
+          <span className={`${!isAuthPage ? 'hidden md:block' : ''}`}>JagoCatat</span>
+        </Link>
       </h2>
 
       {!isAuthPage && (
